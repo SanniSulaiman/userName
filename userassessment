@@ -1,0 +1,24 @@
+import React from 'react';
+import UserInfo from './UserInfo/UserInfo';
+class App extends React.Component {
+    state = {
+        person: [
+            { firstName: "SAnni", lastName: "Chuks", email: "cleverslug@gmail.com", phoneNo: "070541045" },
+            { firstName: "Mark", lastName: "Fish", email: "sahni_ay@gmail.com", phoneNo: "09093609982" },
+            { firstName: "Lanre", lastName: "Ella", email: "maily@gmail.com", phoneNo: "07087883853" },
+           
+        ],
+    };
+render() {
+  return (
+      <>
+          <UserInfo firstName="Emmanuel" lastName="Obinna" email="chuks@gmail.com" phoneNo="09038104041" />
+          <UserInfo firstName={this.state.person[1].firstName} lastName={this.state.person[0].lastName} email={this.state.person[0].email} phoneNo={this.state.person[0].phoneNo} />
+          <UserInfo firstName={this.state.person[2].firstName} lastName={this.state.person[0].lastName} email={this.state.person[0].email} phoneNo={this.state.person[0].phoneNo} />
+         
+       
+      </>
+  )
+}
+}
+export default App;
